@@ -5,3 +5,12 @@ services:
 script:
  - docker build -t pkazmir/node .
  - docker images pkazmir/node
+
+before_deploy:
+  - docker login -u pkazmir -p Umbrellas123
+
+deploy:
+  provider: script
+  script: docker push pkazmir/node
+  on:
+    branch: master
