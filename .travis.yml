@@ -7,7 +7,7 @@ script:
  - docker images pkazmir/node
 
 before_deploy:
-  - docker login -u pkazmir -p xx
+  - docker login -u pkazmir -p Umbrellas123
 
 deploy:
   provider: script
